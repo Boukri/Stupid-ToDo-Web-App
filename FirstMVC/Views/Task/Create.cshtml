@@ -1,0 +1,28 @@
+﻿@model TaskModel
+ <h1>Create task</h1>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Create a new task</h5>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Task" asp-action="CreateTask" class="form-floating" method="post">
+                    <div class="mb-3">
+
+                        <input asp-for="Name" type="text" class="form-control" id="floatingInputTaskName" placeholder="Task name" />
+                    </div>
+                    <div class="mb-3">
+
+                        <input asp-for="Date" type="datetime" class="form-control" id="floatingInputTaskDate" placeholder="Task date" />
+                    </div>
+                    <div class="form-floating mb-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+</div>
